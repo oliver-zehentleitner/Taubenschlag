@@ -4,7 +4,7 @@
 ## What is it
 A Twitter bot that handles oAuth to get authorized by multiple Twitter accounts to retweet on their behalf.
 
-Features:
+### Features:
 - leaderboard
 - backup via ssh (scp to a remote server on every new user account)
 - send commands via Direct Message to the bot
