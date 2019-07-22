@@ -5,15 +5,15 @@
 A Twitter bot that handles oAuth to get authorized by multiple Twitter accounts to retweet on their behalf.
 
 ### Features:
-- leaderboard
-- backup via ssh (scp to a remote server on every new user account)
-- send commands via Direct Message to the bot
+- Top 10 Leaderboard (most retweets)
+- Backup via ssh (scp to a remote server on every new user account)
+- Send commands via Direct Message to the bot
     - get-bot-info
     - get-cmd-list
     - get-info
     - help
     - set-rt-level
-- supports 3 differen subscription levels (1 = high class posts, 2 = informative, 3 = almost everything)
+- Supports 3 different subscription levels (1 = high class posts, 2 = informative, 3 = almost everything)
 
 ## Installation guide for debian 10
 Request a Twitter dev account: https://developer.twitter.com/en/account/environments
