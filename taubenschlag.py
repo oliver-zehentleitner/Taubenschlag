@@ -52,12 +52,10 @@ import threading
 import time
 import tweepy
 
-# set current working directory
 abspath = os.path.abspath(__file__)
 dname = os.path.dirname(abspath)
 os.chdir(dname)
 
-# set logging
 logging.basicConfig(format="{asctime} [{levelname:8}] {process} {thread} {module} {pathname} {lineno}: {message}",
                     filename='taubenschlag.log',
                     style="{")
@@ -67,7 +65,7 @@ logging.getLogger('taubenschlag').setLevel(logging.INFO)
 
 class Taubenschlag(object):
     def __init__(self):
-        self.app_version = "0.9.0"
+        self.app_version = "0.9.1"
         self.config = self._load_config()
         self.app_name = self.config['SYSTEM']['app_name']
         self.dm_sender_name = self.config['SYSTEM']['dm_sender_name']
@@ -703,17 +701,17 @@ class Taubenschlag(object):
             subscriptions_rt_level_1 = 0
             subscriptions_rt_level_2 = 0
             subscriptions_rt_level_3 = 0
-            if self.parsed_args.account_list:
-                for user_id in self.data['accounts']:
-                    if int(self.data['accounts'][user_id]['retweet_level']) == 1:
-                        subscriptions_rt_level_1 += 1
-                    elif int(self.data['accounts'][user_id]['retweet_level']) == 2:
-                        subscriptions_rt_level_1 += 1
-                        subscriptions_rt_level_2 += 1
-                    elif int(self.data['accounts'][user_id]['retweet_level']) == 3:
-                        subscriptions_rt_level_1 += 1
-                        subscriptions_rt_level_2 += 1
-                        subscriptions_rt_level_3 += 1
+            for user_id in self.data['accounts']:
+                if int(self.data['accounts'][user_id]['retweet_level']) == 1:
+                    subscriptions_rt_level_1 += 1
+                elif int(self.data['accounts'][user_id]['retweet_level']) == 2:
+                    subscriptions_rt_level_1 += 1
+                    subscriptions_rt_level_2 += 1
+                elif int(self.data['accounts'][user_id]['retweet_level']) == 3:
+                    subscriptions_rt_level_1 += 1
+                    subscriptions_rt_level_2 += 1
+                    subscriptions_rt_level_3 += 1
+                if self.parsed_args.account_list:
                     try:
                         retweets = self.data['accounts'][str(user_id)]['retweets']
                     except KeyError:

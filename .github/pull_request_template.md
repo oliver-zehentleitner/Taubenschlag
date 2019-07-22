@@ -41,5 +41,5 @@
 - [ ] My change requires a change to the documentation.
 - [ ] I have updated the documentation accordingly.
 - [ ] I have read the 
-**[CONTRIBUTING](https://github.com/floblockchain/flo-retweets/blob/master/CONTRIBUTING.md)** 
+**[CONTRIBUTING](https://github.com/bithon/Taubenschlag/blob/master/CONTRIBUTING.md)** 
 document.

@@ -7,6 +7,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## (development stage/unreleased)
 
+## 0.9.1
+### Fixed
+- rts per rt-level didnt work without -a flag
+
 ## 0.9.0
 ### Added 
 - scp copy on new user to a remote server
