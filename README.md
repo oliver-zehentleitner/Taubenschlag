@@ -18,7 +18,7 @@ A Twitter bot that handles oAuth to get authorized by multiple Twitter accounts 
 ## Installation guide for debian 10
 Request a Twitter dev account: https://developer.twitter.com/en/account/environments
 
-An A record with domain and IP to the server of the Bot.
+Create an A record with domain and IP to the server of the Bot.
 
 You need a server with Python3, a webserver and a reverse proxy. The Webserver and reverse proxy can easily get provided 
 with apache2:
