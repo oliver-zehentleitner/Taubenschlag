@@ -11,11 +11,7 @@
 #
 # Copy Editor: Jason Schmitz
 #
-# This bot the FLO version of 'Taubenschlag' - https://github.com/bithon/Taubenschlag:
-# Project website: https://retweets.floblockchain.com/
-# GitHub: https://github.com/floblockchain/flo-retweets
-#
-# Copyright (c) 2019, Oliver Zehentleitner and floblockchain Team (https://github.com/floblockchain)
+# Copyright (c) 2019, Oliver Zehentleitner
 # All rights reserved.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a
@@ -92,8 +88,7 @@ class Taubenschlag(object):
         self.access_token_secret_dm = self.config['SECRETS']['access_token_secret_dm']
         parser = ArgumentParser(formatter_class=argparse.RawDescriptionHelpFormatter,
                                 description=textwrap.dedent(self.app_name + " Bot " + self.app_version+ " by "
-                                                            "\r\n - Oliver Zehentleitner (2019 - 2019)"
-                                                            "for FLO\r\n\r\n"
+                                                            "\r\n - Oliver Zehentleitner (2019 - 2019)\r\n\r\n"
                                                             "description: this bot manages retweets for the " +
                                                             self.app_name + " Twitter campaign of multiple accounts!"),
                                 epilog=textwrap.dedent("GitHub: " + self.config['SYSTEM']['github_rep_url']))
@@ -430,12 +425,12 @@ class Taubenschlag(object):
                         msg = ""
                         msg += "List of available bot commands:\r\n"
                         msg += "* 'get-cmd-list'\r\n"
-                        msg += "* 'get-bot-info (admins only)\r\n"
                         msg += "* 'get-info'\r\n"
                         msg += "* 'help'\r\n"
                         msg += "* 'set-rt-level:1'\r\n"
                         msg += "* 'set-rt-level:2'\r\n"
                         msg += "* 'set-rt-level:3'\r\n"
+                        msg += "* '\r\nget-bot-info (admins only)\r\n"
                         self.api_self.send_direct_message(dm.message_create['sender_id'],
                                                           "Hello " +
                                                           str(self.api_self.get_user(
@@ -542,7 +537,11 @@ class Taubenschlag(object):
             print("Generating leaderboard ...")
             logging.debug("Generating leaderboard ...")
             for user_id in self.data['accounts']:
-                temp_leaderboard_table[user_id] = self.data['accounts'][user_id]['retweets']
+                try:
+                    temp_leaderboard_table[user_id] = self.data['accounts'][user_id]['retweets']
+                except KeyError:
+                    time.sleep(60*1)
+                    continue
             rank = 1
             self.leaderboard_table = {}
             for key, value in reversed(sorted(temp_leaderboard_table.items(), key=lambda item: (item[1], item[0]))):
