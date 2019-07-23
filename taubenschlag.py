@@ -236,9 +236,9 @@ class Taubenschlag(object):
                                                       "permit it to:\r\n* Access or otherwise view your Direct Messages"
                                                       " (DMs)\r\n* Access or otherwise view your email address\r\n"
                                                       "* Access or otherwise view your Twitter password\r\n"
-                                                      "\r\nBy authorizing any application, including the " +
+                                                      "\r\nBy authorizing any application, including '" +
                                                       self.app_name +
-                                                      "Retweets, you continue to operate under Twitter's Terms of "
+                                                      "', you continue to operate under Twitter's Terms of "
                                                       "Service. Some usage data will be "
                                                       "shared with Twitter. For more information, see Twitter’s "
                                                       'Privacy Policy.'"\r\n"
@@ -337,9 +337,10 @@ class Taubenschlag(object):
                                                           "\r\nAuthorizing " + self.app_name + " does not permit it to:"
                                                           "\r\n* Access or otherwise view your Direct Messages (DMs)"
                                                           "\r\n* Access or otherwise view your email address\r\n"
-                                                          "* Access or otherwise view your Twitter password\r\n\r\nBy a"
-                                                          "uthorizing any application, including the " + self.app_name +
-                                                          ", you continue to operate under Twitter's Terms of "
+                                                          "* Access or otherwise view your Twitter password\r\n\r\nBy "
+                                                          "authorizing any application, including '" +
+                                                          self.app_name +
+                                                          "', you continue to operate under Twitter's Terms of "
                                                           "Service. Some usage data will be "
                                                           "shared with Twitter. For more information, see Twitter’s "
                                                           'Privacy Policy.'"\r\n"

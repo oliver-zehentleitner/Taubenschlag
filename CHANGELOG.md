@@ -7,6 +7,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## (development stage/unreleased)
 
+### Fixed
+- Type in welcome and help DM
+
 ## 0.9.2
 ### Added
 - delay between retweets
