@@ -7,6 +7,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## (development stage/unreleased)
 
+## 0.9.2
+### Added
+- delay between retweets
+- print and log error if retweet fails with unkown error
+### Renamed
+- api_listener_ to webserver_listener
+
 ## 0.9.1
 ### Fixed
 - rts per rt-level didnt work without -a flag

@@ -47,6 +47,7 @@ import datetime
 import logging
 import json
 import os
+import random
 import textwrap
 import threading
 import time
@@ -259,8 +260,8 @@ class Taubenschlag(object):
                 return redirect(self.config['SYSTEM']['redirect_canceled'], code=302)
         try:
             dispatcher = wsgi.PathInfoDispatcher({'/': app})
-            webserver = wsgi.WSGIServer((self.config['SYSTEM']['api_listener_ip'],
-                                         int(self.config['SYSTEM']['api_listener_port'])),
+            webserver = wsgi.WSGIServer((self.config['SYSTEM']['webserver_listener_ip'],
+                                         int(self.config['SYSTEM']['webserver_listener_port'])),
                                         dispatcher)
             webserver.start()
             logging.info("webserver started!")
@@ -623,6 +624,7 @@ class Taubenschlag(object):
             rt_levels = 3
             round = 1
             while rt_levels >= round:
+                start_time = time.time()
                 print("Retweeting level " + str(round) + " tweets:")
                 conditions_list = self.config['RT-LEVEL-' + str(round)]['conditions'].split(",")
                 source_accounts_list = self.config['RT-LEVEL-' + str(round)]['from'].split(",")
@@ -659,6 +661,7 @@ class Taubenschlag(object):
                                             self.config['SYSTEM']['let_bot_account_retweet'] == "True") \
                                                 and int(self.data['accounts'][str(user_id)]['retweet_level']) >= \
                                                 round:
+                                            time.sleep(random.randint(0, 5))
                                             api = self.get_api_user(user_id)
                                             try:
                                                 user_tweet = api.get_status(tweet.id)
@@ -687,6 +690,9 @@ class Taubenschlag(object):
                                                           user_id)
                                                     del self.data['accounts'][user_id]
                                                     self.save_db()
+                                                else:
+                                                    logging.info(str(error_msg) + " UserID: " + user_id)
+                                                    print(str(error_msg) + " UserID: " + user_id)
                                     if count_tweet:
                                         self.data['statistic']['tweets'] += 1
                                     try:
@@ -736,7 +742,13 @@ class Taubenschlag(object):
             print("Sent help DMs: " + str(self.data['statistic']['sent_help_dm']))
             print("Executed bot commands: " + str(self.data['statistic']['received_botcmds']))
             print("--------------------------------------------------------------------------------------")
-            time.sleep(30)
+            end_time = time.time()
+            if end_time - start_time > 60:
+                continue
+            elif end_time - start_time > 20:
+                time.sleep(30)
+            else:
+                time.sleep(60)
 
     def start_bot(self):
         self.start_thread(self.leaderboard)

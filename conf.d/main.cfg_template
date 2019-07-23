@@ -4,9 +4,9 @@ db_file = taubenschlag.json
 
 [SYSTEM]
 ; if the reverse proxy is hosted on a separate system set to '0.0.0.0', if its on the localhost then use '127.0.0.1'
-api_listener_ip = 127.0.0.1
+webserver_listener_ip = 127.0.0.1
 
-api_listener_port = 17613
+webserver_listener_port = 17613
 
 app_name = Taubenschlag
 
@@ -17,7 +17,7 @@ bot_topic = UNICORN
 
 bot_twitter_account = UNICORN_OZ
 
-base_url = https://taubenschlag.lucit.co/
+base_url = https://taubenschlag.yourdomain.com
 
 ssh_backup_on_new_user = False
 
@@ -34,9 +34,9 @@ issues_report_to = https://github.com/bithon/Taubenschlag/issues/new/choose
 
 retweet_sources_description = View the rule set for retweet levels: <link>
 
-redirect_successfull_participation = https://taubenschlag.lucit.co/thank-you.html
+redirect_successfull_participation = https://taubenschlag.yourdomain.com/thank-you.html
 
-redirect_canceled = https://taubenschlag.lucit.co/canceled.html
+redirect_canceled = https://taubenschlag.yourdomain.com/canceled.html
 
 ; sys admins are allowed to use private commands (get-info) and are receiving status messages from the bot (separate
 ; with comma ",")
