@@ -657,7 +657,12 @@ class Taubenschlag(object):
                                     logging.debug(str(tweet.id) + " - " + str(tweet.text[0:80]).splitlines()[0] +
                                                   " ...")
                                     accounts = deepcopy(self.data['accounts'])
+                                    # randomize order of users for a more natural behaviour:
+                                    random_account_list = []
                                     for user_id in accounts:
+                                        random_account_list.append(user_id)
+                                    random.shuffle(random_account_list)
+                                    for user_id in random_account_list:
                                         if (str(user_id) != str(self.bot_user_id) or
                                             self.config['SYSTEM']['let_bot_account_retweet'] == "True") \
                                                 and int(self.data['accounts'][str(user_id)]['retweet_level']) >= \

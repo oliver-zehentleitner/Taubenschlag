@@ -7,6 +7,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## (development stage/unreleased)
 
+### Added
+- Randomization of the user order when tweeting
 ### Fixed
 - Type in welcome and help DM
 
