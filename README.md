@@ -14,6 +14,7 @@ A Twitter bot that handles oAuth to get authorized by multiple Twitter accounts 
     - help
     - set-rt-level
 - Supports 3 different subscription levels (1 = high class posts, 2 = informative, 3 = almost everything)
+- Post new Tweets to Telegram
 
 ## Installation guide for debian 10
 Request a Twitter dev account: https://developer.twitter.com/en/account/environments
