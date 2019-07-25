@@ -718,7 +718,7 @@ class Taubenschlag(object):
                                             telegram_message = "I detected a new tweet (rt-level:" + str(round) + "):" \
                                                                " https://twitter.com/" + str(tweet.user.screen_name) + \
                                                                "/status/" + str(tweet.id) + "\r\n\r\n" \
-                                                               "Please help retweeting manually or simply let the " \
+                                                               "Please help retweeting manually or simply let our " \
                                                                "bot do this for you: " + self.base_url
                                         self.post_to_telegram(telegram_message)
                                     try:
