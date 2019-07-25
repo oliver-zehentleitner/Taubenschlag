@@ -67,7 +67,7 @@ logging.getLogger('taubenschlag').setLevel(logging.INFO)
 
 class Taubenschlag(object):
     def __init__(self):
-        self.app_version = "0.10.0"
+        self.app_version = "0.10.1"
         self.config = self._load_config()
         self.app_name = self.config['SYSTEM']['app_name']
         self.dm_sender_name = self.config['SYSTEM']['dm_sender_name']
@@ -715,8 +715,8 @@ class Taubenschlag(object):
                                     if count_tweet:
                                         self.data['statistic']['tweets'] += 1
                                         if self.telegram_post_new_tweets_to_chat_room == "True":
-                                            telegram_message = "I detected a new tweet: " \
-                                                               "https://twitter.com/" + str(tweet.user.screen_name) + \
+                                            telegram_message = "I detected a new tweet (rt-level:" + str(round) + "):" \
+                                                               " https://twitter.com/" + str(tweet.user.screen_name) + \
                                                                "/status/" + str(tweet.id) + "\r\n\r\n" \
                                                                "Please help retweeting manually or simply let the " \
                                                                "bot do this for you: " + self.base_url

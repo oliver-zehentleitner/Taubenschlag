@@ -7,6 +7,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## (development stage/unreleased)
 
+## 0.10.1
+### Added
+- RT level to telegram post
+
 ## 0.10.0
 ### Added
 - Post new tweets to telegram group
