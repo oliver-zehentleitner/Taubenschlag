@@ -67,7 +67,7 @@ logging.getLogger('taubenschlag').setLevel(logging.INFO)
 
 class Taubenschlag(object):
     def __init__(self):
-        self.app_version = "0.10.1"
+        self.app_version = "0.10.2"
         self.config = self._load_config()
         self.app_name = self.config['SYSTEM']['app_name']
         self.dm_sender_name = self.config['SYSTEM']['dm_sender_name']
@@ -250,7 +250,8 @@ class Taubenschlag(object):
                                                       'Privacy Policy.'"\r\n"
                                                       "\r\nFor questions or additional information, send a direct "
                                                       "message with the text 'help' to me or 'get-cmd-list' to see "
-                                                      "a list of all available commands!\r\n\r\nPlease report issues to "
+                                                      "a list of all available commands!\r\n\r\n"
+                                                      "Please report issues to "
                                                       + self.issues_report_to +
                                                       " - Thank you!\r\n"
                                                       "\r\nBest regards,\r\n" + self.dm_sender_name + "!")
@@ -675,6 +676,7 @@ class Taubenschlag(object):
                                     for user_id in accounts:
                                         random_account_list.append(user_id)
                                     random.shuffle(random_account_list)
+                                    made_retweets = 0
                                     for user_id in random_account_list:
                                         if (str(user_id) != str(self.bot_user_id) or
                                             self.config['SYSTEM']['let_bot_account_retweet'] == "True") \
@@ -691,6 +693,7 @@ class Taubenschlag(object):
                                                         print("\tRetweeted:", user_id,
                                                               str(self.api_self.get_user(user_id).screen_name))
                                                         self.data['statistic']['retweets'] += 1
+                                                        made_retweets +=1
                                                         try:
                                                             self.data['accounts'][str(user_id)]['retweets'] += 1
                                                         except KeyError:
@@ -715,12 +718,14 @@ class Taubenschlag(object):
                                     if count_tweet:
                                         self.data['statistic']['tweets'] += 1
                                         if self.telegram_post_new_tweets_to_chat_room == "True":
-                                            telegram_message = "I detected a new tweet (rt-level:" + str(round) + "):" \
-                                                               " https://twitter.com/" + str(tweet.user.screen_name) + \
+                                            telegram_message = "I found a new tweet with rt-level " + str(round) + \
+                                                               " and made " + str(made_retweets) + " retweets: " \
+                                                               "https://twitter.com/" + str(tweet.user.screen_name) + \
                                                                "/status/" + str(tweet.id) + "\r\n\r\n" \
-                                                               "Please help retweeting manually or simply let our " \
-                                                               "bot do this for you: " + self.base_url
-                                        self.post_to_telegram(telegram_message)
+                                                               "Please help us retweeting manually or simply let our " \
+                                                               "bot do this for you and join FLO Retweets " + \
+                                                               self.base_url
+                                            self.post_to_telegram(telegram_message)
                                     try:
                                         self.data['tweets'].append(tweet.id)
                                     except AttributeError:

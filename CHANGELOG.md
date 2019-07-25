@@ -7,6 +7,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## (development stage/unreleased)
 
+## 0.10.2
+### Changed
+- Delay time 0-15 seconds between retweets
+### Fixed
+- send msg to telegram
+
 ## 0.10.1
 ### Added
 - RT level to telegram post
