@@ -680,7 +680,7 @@ class Taubenschlag(object):
                                             self.config['SYSTEM']['let_bot_account_retweet'] == "True") \
                                                 and int(self.data['accounts'][str(user_id)]['retweet_level']) >= \
                                                 round:
-                                            time.sleep(random.randint(0, 5))
+                                            time.sleep(random.randint(0, 15))
                                             api = self.get_api_user(user_id)
                                             try:
                                                 user_tweet = api.get_status(tweet.id)
