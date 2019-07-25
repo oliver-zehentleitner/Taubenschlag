@@ -7,10 +7,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## (development stage/unreleased)
 
+## 0.10.0
 ### Added
+- Post new tweets to telegram group
 - Randomization of the user order when tweeting
 ### Fixed
-- Type in welcome and help DM
+- Typo in welcome and help DM
 
 ## 0.9.2
 ### Added

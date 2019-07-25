@@ -41,3 +41,5 @@ redirect_canceled = https://taubenschlag.yourdomain.com/canceled.html
 ; sys admins are allowed to use private commands (get-info) and are receiving status messages from the bot (separate
 ; with comma ",")
 sys_admin_list = UNICORN_OZ
+
+telegram_post_new_tweets_to_chat_room = False

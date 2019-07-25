@@ -1,5 +1,6 @@
 cheroot
 flask
 paramiko
+requests
 scp
 tweepy
