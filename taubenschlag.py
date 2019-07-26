@@ -722,8 +722,8 @@ class Taubenschlag(object):
                                                                " and made " + str(made_retweets) + " retweets: " \
                                                                "https://twitter.com/" + str(tweet.user.screen_name) + \
                                                                "/status/" + str(tweet.id) + "\r\n\r\n" \
-                                                               "Please help us retweeting manually or simply let our " \
-                                                               "bot do this for you and join FLO Retweets " + \
+                                                               "Please help by retweeting manually or simply let our " \
+                                                               "bot do this for you and join FLO Retweets:\r\n" + \
                                                                self.base_url
                                             self.post_to_telegram(telegram_message)
                                     try:
