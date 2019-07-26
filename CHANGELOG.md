@@ -7,6 +7,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## (development stage/unreleased)
 
+## 0.11.0
 ### Added 
 - Post to Telegram Channel
 
