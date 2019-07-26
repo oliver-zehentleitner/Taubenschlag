@@ -42,4 +42,8 @@ redirect_canceled = https://taubenschlag.yourdomain.com/canceled.html
 ; with comma ",")
 sys_admin_list = UNICORN_OZ
 
-telegram_post_new_tweets_to_chat_room = False
+telegram_post_new_tweets_to_group = False
+
+telegram_post_new_tweets_to_channel = False
+
+telegram_channel_url = https://t.me/...
