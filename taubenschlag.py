@@ -692,7 +692,7 @@ class Taubenschlag(object):
                                                 user_tweet = api.get_status(tweet.id)
                                                 if not user_tweet.retweeted:
                                                     try:
-                                                        #user_tweet.retweet()
+                                                        user_tweet.retweet()
                                                         count_tweet = True
                                                         print("\tRetweeted:", user_id,
                                                               str(self.api_self.get_user(user_id).screen_name))
