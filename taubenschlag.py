@@ -581,10 +581,8 @@ class Taubenschlag(object):
 
     def post_to_telegram(self, message, chat_id):
         send_text = 'https://api.telegram.org/bot' + str(self.telegram_auth_token) + '/sendMessage?chat_id=' + \
-                    str(chat_id).strip() + '&parse_mode=Markdown&text=' + str(message)
-        print(str(send_text))
+                    str(chat_id).strip() + '&text=' + str(message)
         response = requests.get(send_text)
-        print(response.json())
         return response.json()
 
     def refresh_api_self(self):
