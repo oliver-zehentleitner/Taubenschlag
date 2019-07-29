@@ -46,4 +46,4 @@ telegram_post_new_tweets_to_group = False
 
 telegram_post_new_tweets_to_channel = False
 
-telegram_channel_tag = flo\_retweets
+telegram_channel_tag = floretweets
