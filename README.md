@@ -8,7 +8,7 @@
 ## What is it
 A Twitter bot that handles oAuth to get authorized by multiple Twitter accounts to retweet on their behalf. 
 
-The bot finds tweets new tweets that match with a predefined [ruleset](https://github.com/oliver-zehentleitner/Taubenschlag/blob/master/conf.d/rt-level-rule-set.cfg_template) and retweets them on behalf the joined users. 
+The bot finds new tweets that match to a predefined [ruleset](https://github.com/oliver-zehentleitner/Taubenschlag/blob/master/conf.d/rt-level-rule-set.cfg_template) and retweets them on behalf the joined users. 
 
 ### Features:
 - Top 10 Leaderboard (most retweets)
