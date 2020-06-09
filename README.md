@@ -1,7 +1,6 @@
+![Taubenschlag](https://s3.gifyu.com/images/Taubenschlag.jpg)
 [![Donations/week](http://img.shields.io/liberapay/receives/oliver-zehentleitner.svg?logo=liberapay)](https://liberapay.com/oliver-zehentleitner/donate)
 [![Patrons](http://img.shields.io/liberapay/patrons/oliver-zehentleitner.svg?logo=liberapay")](https://liberapay.com/oliver-zehentleitner/donate)
-
-![Taubenschlag](https://s3.gifyu.com/images/Taubenschlag.jpg)
 # Taubenschlag
 
 ## What is it
