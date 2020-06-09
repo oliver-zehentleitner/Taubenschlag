@@ -57,7 +57,7 @@ Restart the server:
 ```
 shutdown -r 0
 ```
-Download/Copy [Taubenschlag](https://github.com/bithon/Taubenschlag/releases/latest) and make the app available in 
+Download/Copy [Taubenschlag](https://github.com/oliver-zehentleitner/Taubenschlag/releases/latest) and make the app available in 
 `/opt/taubenschlag`.
 
 Install requirements:
@@ -131,10 +131,10 @@ user auth via ssh (scp) to a remote server. Login for scp can be defined in `sec
 To restore a backup just stop the bot, do `cat backup_file > taubenschlag.json` and start the bot.
 
 ## Report bugs or suggest features
-https://github.com/bithon/Taubenschlag/issues
+https://github.com/oliver-zehentleitner/Taubenschlag/issues
 
 ## Todo
-- https://github.com/bithon/Taubenschlag/projects/1
+- https://github.com/oliver-zehentleitner/Taubenschlag/projects/1
 
 ### Contributors
 [![Contributors](https://contributors-img.web.app/image?repo=oliver-zehentleitner/Taubenschlag)](https://github.com/oliver-zehentleitner/Taubenschlag/graphs/contributors)
