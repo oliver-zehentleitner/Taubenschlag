@@ -1,7 +1,9 @@
 ![Taubenschlag](https://s3.gifyu.com/images/Taubenschlag.jpg)
+
+# Taubenschlag
+
 [![Donations/week](http://img.shields.io/liberapay/receives/oliver-zehentleitner.svg?logo=liberapay)](https://liberapay.com/oliver-zehentleitner/donate)
 [![Patrons](http://img.shields.io/liberapay/patrons/oliver-zehentleitner.svg?logo=liberapay")](https://liberapay.com/oliver-zehentleitner/donate)
-# Taubenschlag
 
 ## What is it
 A Twitter bot that handles oAuth to get authorized by multiple Twitter accounts to retweet on their behalf.
