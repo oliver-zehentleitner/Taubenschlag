@@ -11,7 +11,7 @@ A Twitter bot that handles oAuth to get authorized by multiple Twitter accounts 
 The bot finds new tweets that match to a predefined [ruleset](https://github.com/oliver-zehentleitner/Taubenschlag/blob/master/conf.d/rt-level-rule-set.cfg_template) and retweets them on behalf the joined users. 
 
 ### Features:
-- Top 10 Leaderboard (most retweets)
+- Top 10 User Leaderboard (most retweets)
 - Backup via ssh (scp to a remote server on every new user account)
 - Send commands via Direct Message to the bot
     - get-bot-info
