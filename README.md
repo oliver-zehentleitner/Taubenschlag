@@ -149,14 +149,15 @@ If you would like to help me to dedicate my time and energy to this project, don
 
 [![Donate using Liberapay](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/oliver-zehentleitner/donate)
 
+
 ```
+Terra (LUNA, UST, ...): terra1yt34qmmycextztnj9mpt3mnjzqqvl8jtqqq7g9
 BTC: 39fS74fvcGnmEk8JUV8bG6P1wkdH29GtsA
-DASH: XsRhBuPkXGF9WvifdpkVhTGSmVT4VcuQZ7
 ETH: 0x1C15857Bf1E18D122dDd1E536705748aa529fc9C
-LTC: LYNzHMFUbee3siyHvNCPaCjqXxjyq8YRGJ
-XMR: 85dzsTRh6GRPGVSJoUbFDwAf9uwwAdim1HFpiGshLeKHgj2hVqKtYVPXMZvudioLsuLS1AegkUiQ12jwReRwWcFvF7kDAbF
-ZEC: t1WvQMPJMriGWD9qkZGDdE9tTJaawvmsBie
 ```
-## You need a Python Dev?
-If you would like to [hire me](https://about.me/oliver-zehentleitner) for a Python project, you can book me through 
-my company [LUCIT](https://www.lucit.co/desktop-and-server-apps.html).
+## Commercial Support
+[![LUCIT](https://www.lucit.tech/files/images/logos/LUCIT-LOGO-TRANS-PLAIN-NEW.png)](https://www.lucit.tech)
+
+***Do you need a developer, operator or consultant?***
+
+Contact [me](https://about.me/oliver-zehentleitner) for a non-binding initial consultation via my company 
