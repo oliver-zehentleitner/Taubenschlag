@@ -30,7 +30,7 @@ Create an A record with domain and IP to the server of the Bot.
 You need a server with Python3, a webserver and a reverse proxy. The Webserver and reverse proxy can easily get provided 
 with apache2:
 ```
-apt-get install apache2 python-certbot-apache
+apt-get install apache2 python3-certbot-apache
 ```
 Set the hostname in `/etc/apache2/sites-enabled/000-default.conf` to `taubenschlag.yourdomain.com`
 ```
